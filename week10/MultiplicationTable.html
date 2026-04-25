@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Multiplication Table</title>
+
+<style>
+    body {
+        font-family: "Times New Roman", serif;
+        text-align: center;
+    }
+
+    table {
+        margin: auto;
+    }
+
+    iframe {
+        border: none;
+    }
+
+    .figure {
+        font-style: italic;
+        margin-top: 5px;
+    }
+</style>
+
+<script>
+function display() {
+    var a = document.f.a.value;
+    var frame = document.getElementById("view_area").contentWindow;
+
+    // Xóa nội dung cũ
+    frame.document.open();
+    frame.document.write("");
+    frame.document.close();
+
+    // Kiểm tra input
+    if (a === "" || isNaN(a)) {
+        frame.document.open();
+        frame.document.write("<div style='color:red; text-align:center;'>You must enter a number</div>");
+        frame.document.close();
+        return;
+    }
+
+    // Hiển thị bảng cửu chương
+    frame.document.open();
+    frame.document.write("<div style='border:1px solid gray; width:200px; margin:auto; padding:10px;'>");
+    frame.document.write("<b>Multiplication table " + a + ":</b><br>");
+
+    for (var i = 1; i <= 10; i++) {
+        frame.document.write(a + " x " + i + " = " + (a * i) + "<br>");
+    }
+
+    frame.document.write("</div>");
+    frame.document.close();
+}
+</script>
+
+</head>
+
+<!-- QUAN TRỌNG: phải có dòng này -->
+<body onload="display()">
+
+<form name="f">
+
+<h2>MULTIPLICATION TABLE</h2>
+
+<table>
+<tr>
+    <td>Which multiplication table that you want to display?</td>
+    <td>
+        <input type="text" name="a" value="9" size="5" onkeyup="display()">
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <iframe id="view_area" width="250" height="250"></iframe>
+    </td>
+</tr>
+</table>
+
+<div class="figure">Figure 11.4</div>
+
+</form>
+
+</body>
+</html>
