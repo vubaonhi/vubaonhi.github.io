@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; }
+        .form-container { width: 600px; border: 1px solid #ccc; padding: 20px; margin-top: 20px; }
+        .header-text { text-align: right; font-style: italic; font-size: 12px; }
+        h2 { color: #800000; margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #ccc; margin: 15px 0; }
+        
+        .row { display: flex; margin-bottom: 10px; align-items: center; }
+        .label { width: 150px; font-size: 14px; }
+        .input-field { flex: 1; }
+        input[type="text"], input[type="password"], select { padding: 3px; border: 1px solid #999; }
+        
+        .interests { display: grid; grid-template-columns: 1fr 1fr; margin-left: 150px; gap: 5px; }
+        .interest-item { font-size: 13px; display: flex; align-items: center; }
+        
+        .btn-submit { 
+            background-color: #a52a2a; color: white; border: none; 
+            padding: 10px 25px; border-radius: 20px; font-weight: bold;
+            cursor: pointer; display: block; margin: 20px auto;
+        }
+        .footer-text { text-align: center; font-size: 12px; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="header-text">Web Design and Development</div>
+    <h2>REGISTRATION</h2>
+    <hr>
+
+    <form action="#" method="post">
+     
+        <div class="row">
+            <div class="label">Username:</div>
+            <input type="text" class="input-field" name="user">
+        </div>
+        <div class="row">
+            <div class="label">Password:</div>
+            <input type="password" class="input-field" name="pass">
+        </div>
+        <div class="row">
+            <div class="label">Re-type Password:</div>
+            <input type="password" class="input-field" name="re-pass">
+        </div>
+
+        <hr>
+
+    <div class="row">
+    <div class="label">Birthday:</div>
+    <div>
+        <select name="month">
+            <option value="" disabled selected>[select one]</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <input type="text" placeholder="Day" style="width: 40px;"> ,
+        <input type="text" placeholder="Year" style="width: 60px;">
+        <span style="font-size: 11px; color: #666;">(Month Day, Year)</span>
+    </div>
+</div>
+
+        <hr>
+
+    
+        <div style="display: flex;">
+            <div class="label">First Name:</div>
+            <input type="text" style="width: 120px; margin-right: 20px;">
+            <div style="margin-right: 10px;">Last Name:</div>
+            <input type="text" style="width: 120px;">
+        </div>
+
+        <hr>
+
+      
+        <div style="font-size: 14px; margin-bottom: 10px;">Interests (optional):</div>
+        <div class="interests">
+            <div class="interest-item"><input type="checkbox"> Entertainment</div>
+            <div class="interest-item"><input type="checkbox"> Business</div>
+            <div class="interest-item"><input type="checkbox"> Home & Family</div>
+            <div class="interest-item"><input type="checkbox"> Computers & Technology</div>
+            <div class="interest-item"><input type="checkbox"> Health</div>
+            <div class="interest-item"><input type="checkbox"> Personal Finance</div>
+            <div class="interest-item"><input type="checkbox"> Music</div>
+            <div class="interest-item"><input type="checkbox"> Small Business</div>
+        </div>
+
+        <hr>
+
+    
+        <button type="submit" class="btn-submit">REGISTER</button>
+    </form>
+    
+    <div class="footer-text">Figure 6.6 - Registration form</div>
+</div>
+
+</body>
+</html>
